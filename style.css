@@ -1,0 +1,49 @@
+body{
+    background-color: rgb(195, 192, 192);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+#box{
+    display: block;
+    border: 4px solid black;
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+    background-color: white;
+}
+button{
+    color: white;
+    border-radius: 5px;
+    cursor:pointer ;
+    transition: background-color 0.5s ease;
+    font-size: 25px;
+}
+#clock{
+    font-family:monospace ;
+    font-size: 40px;
+}
+h1{
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 100;
+}
+#start{
+    background-color: rgb(34, 236, 34);
+}
+#start:hover{
+    background-color: rgb(118, 223, 118);
+}
+#stop{
+    background-color: red;
+}
+#stop:hover{
+    background-color: rgb(203, 94, 94);
+}
+#reset{
+    background-color: rgb(26, 187, 236);
+}
+#reset:hover{
+    background-color: rgb(124, 190, 210);
+}
