@@ -1,0 +1,14 @@
+
+#container{
+    text-align: center;
+}
+#mySubmit{
+background-color: rgb(4, 150, 240);
+color: white;
+border-radius: 5px;
+cursor:pointer;
+}
+input{
+    font-size: 20px;
+    width: 70px;
+}
