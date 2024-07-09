@@ -1,0 +1,105 @@
+body {
+    background-color: #d365e2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#container {
+    background-color: #b46dc3;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+h4 {
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+
+#display_psw {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#display_psw input {
+    width: 80%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#display_psw span {
+    cursor: pointer;
+}
+
+#box {
+    display: flex;
+    flex-direction: column;
+}
+
+#Pass_len {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h6 {
+    font: 1em sans-serif;
+}
+
+.slider {
+    width: 100%;
+    margin: 10px 0;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+label {
+    margin-bottom: 10px;
+}
+
+#indicator {
+    height: 10px;
+    width: 100%;
+    background-color: rgb(174, 237, 3);
+    border-radius: 5px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#indicator.weak {
+    background-color: red;
+}
+
+#indicator.medium {
+    background-color: yellow;
+}
+
+#indicator.strong {
+    background-color: green;
+}
+
+#copyBtn.success img {
+    filter: invert(41%) sepia(56%) saturate(1187%) hue-rotate(86deg) brightness(102%) contrast(99%);
+}
