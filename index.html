@@ -4,45 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Password Generator</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="container">
-        <h4>PASSWORD GENERATOR</h4>
-        <div id="display_psw">
-            <input type="text" id="password" readonly>
-            <span  id="copyBtn" data-copy-msg>
-                <img src="copy_sym.png" alt="copy sym" width="23" height="23" >
-            </span>
-        </div>
-        <div id="box">
-            <div id="Pass_len">
-                <h6>Password Length</h6>
-                <span id="lengthDisplay">0</span>
+    <h4>Our <u>Revi</u>ews</h4>
+    <div id="body1">
+        <div id="container">
+            <img src="boy1.jpeg" id="photo" alt="Profile Photo">
+            <h6 id="name">Peter Jones</h6>
+            <h5 id="job">INTERN</h5>
+            <p id="text">
+            "Sriracha  literally  flexitarian irony, vape marfa unicorn. Glossier  tattooed  8 - bit ,  fixie  waistcoat  offal  activated  charcoal  slow - carb  marfa  hell  of  pabst  raclette  post - ironic  jianbing  swag and I landed here.At my dream company"
+   
+            </p>
+            <div id="move">
+                <button id="btn1" class="nav-btn">&lt;</button>
+                <button id="btn2" class="nav-btn">&gt;</button>
             </div>
-            <input type="range" min="1" max="20" class="slider" step="1" id="inputSlider">
-            <div>
-                <input type="checkbox" id="UpChar">
-                <label for="UpChar">Include Uppercase Letters</label>
-            </div>
-            <div>
-                <input type="checkbox" id="LowChar">
-                <label for="LowChar">Include Lowercase Letters</label>
-            </div>
-            <div>
-                <input type="checkbox" id="Num">
-                <label for="Num">Include Numbers</label>
-            </div>
-            <div>
-                <input type="checkbox" id="Sym">
-                <label for="Sym">Include Symbols</label>
-            </div>
-            <div>
-                <h6>Password Strength</h6>
-                <div id="indicator"></div>
-            </div><br>
-            <button id="generateBtn">GENERATE PASSWORD</button>
+            <br>
+            <button id="btn">Surprise Me</button>
         </div>
     </div>
     <script src="index.js"></script>

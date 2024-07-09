@@ -1,85 +1,53 @@
-document.addEventListener('DOMContentLoaded', function() {
-    let passwordLength = 10; // Default password length
-    let password = ''; // Generated password
+const btn=document.getElementById('btn');
+const btn1=document.getElementById('btn1');
+const btn2=document.getElementById('btn2');
+const author=document.getElementById('name');
+const job=document.getElementById('job');
+const text=document.getElementById('text');
+const photo=document.getElementById('photo');
 
-    // DOM elements
-    const inputSlider = document.getElementById('inputSlider');
-    const lengthDisplay = document.getElementById('lengthDisplay');
-    const generateBtn = document.getElementById('generateBtn');
-    const passwordField = document.getElementById('password');
-    const indicator = document.getElementById('indicator');
-    const copyBtn = document.getElementById('copyBtn');
-    const checkboxes = {
-        uppercase: document.getElementById('UpChar'),
-        lowercase: document.getElementById('LowChar'),
-        numbers: document.getElementById('Num'),
-        symbols: document.getElementById('Sym')
-    };
-
-    // Initialize slider and display
-    inputSlider.value = passwordLength;
-    lengthDisplay.textContent = passwordLength;
-
-    // Event listeners
-    inputSlider.addEventListener('input', function() {
-        passwordLength = inputSlider.value;
-        lengthDisplay.textContent = passwordLength;
-        updateIndicator();
-    });
-
-    generateBtn.addEventListener('click', function() {
-        password = generatePassword(passwordLength);
-        passwordField.value = password;
-        updateIndicator();
-    });
-
-    Object.values(checkboxes).forEach(checkbox => {
-        checkbox.addEventListener('change', updateIndicator);
-    });
-
-    copyBtn.addEventListener('click', function() {
-        const password = passwordField.value;
-        if (password) {
-            navigator.clipboard.writeText(password).then(() => {
-                copyBtn.classList.add('success');
-                setTimeout(() => {
-                    copyBtn.classList.remove('success');
-                }, 2000); // Remove success indicator after 2 seconds
-            }).catch(err => {
-                console.error('Failed to copy text: ', err);
-            });
-        }
-    });
-    
-
-    // Function to generate password
-    function generatePassword(length) {
-        let charset = '';
-        if (checkboxes.uppercase.checked) charset += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        if (checkboxes.lowercase.checked) charset += 'abcdefghijklmnopqrstuvwxyz';
-        if (checkboxes.numbers.checked) charset += '0123456789';
-        if (checkboxes.symbols.checked) charset += '!@#$%^&*()_+-=[]{}|;:,.<>?';
-
-        let password = '';
-        for (let i = 0; i < length; i++) {
-            let randomIndex = Math.floor(Math.random() * charset.length);
-            password += charset[randomIndex];
-        }
-        return password;
+const reviews=[
+    { id:1,
+        name:"Peter Jones",
+        job:"INTERN",
+        photo:"boy1.jpeg",
+        text:"Sriracha  literally  flexitarian irony, vape marfa unicorn. Glossier  tattooed  8 - bit ,  fixie  waistcoat  offal  activated  charcoal  slow - carb  marfa  hell  of  pabst  raclette  post - ironic  jianbing  swag and I landed here.At my dream company amazon"
+    },    
+   { id:2,
+    name:"Riya thakur",
+    job:"WEB DEVELOPER",
+    photo:"girl1.jpeg",
+    text:"freeCodeCamp was the gateway to my career as a software developer. The well-structured curriculum took my coding knowledge from a total beginner level to a very confident level. It was everything I needed to land at amazing company.",
+},{id:3,
+    name:"Emma Bostian",
+    job:"SOFTWARE ENGINEER",
+    photo:"girl2.jpeg",
+    text:"I've always struggled with learning JavaScript. I've taken many courses but freeCodeCamp's course was the one which stuck. Studying JavaScript as well as data structures and algorithms on freeCodeCamp gave me the skills and confidence.",
+ }];
+ let index=0;
+ window. addEventListener ("DOMContentLoaded", function () {
+    showPerson(index)});
+    function showPerson(person){
+        const item=reviews[person];
+        photo.src=item.photo;
+        author.textContent=item.name;
+        job.textContent=item.job;
+        text.textContent=item.text;
     }
-
-    // Function to set indicator color
-    function updateIndicator() {
-        const length = passwordLength;
-        indicator.className = '';
-        if (length <= 5) {
-            indicator.classList.add('weak');
-        } else if (length >5 && length<=10) {
-            indicator.classList.add('medium');
-        } else {
-            indicator.classList.add('strong');
-        }
+btn2.addEventListener("click",function(){
+    index++;
+    if(index>reviews.length){
+        index=0;
     }
-
-    updateIndicator();
+    showPerson(index);
+});
+btn1.addEventListener("click",function(){
+    index--;
+    if (index<0) {
+        index=reviews.length-1;
+    }
+    showPerson(index);   
+});
+btn.addEventListener("click",function(){
+    showPerson(Math.floor(Math.random()*reviews.length));
 });
