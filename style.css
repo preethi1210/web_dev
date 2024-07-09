@@ -1,0 +1,21 @@
+#clock{
+    font-size: 100px;
+    font-family: monospace;
+    color: aliceblue;
+    backdrop-filter: blur(2px);
+    text-align: center;
+    width: 100%;
+    background-color: rgba(74, 78, 77, 0.1);
+}
+body{
+    background-image: url(bg.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 1000px;
+}
